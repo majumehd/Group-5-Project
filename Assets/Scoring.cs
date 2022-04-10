@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Scoring : MonoBehaviour
 {
-    [SerializeField] int score = 0;
-    const int DEFAULT_POINTS = 1;
+    [SerializeField] public float score = 0;
+    const float DEFAULT_POINTS = 1;
     [SerializeField] Text scoreTxt;
 
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class Scoring : MonoBehaviour
     {
         
     }
-    public void AddPoints(int points)
+    public void AddPoints(float points)
     {
         score += points;
         Debug.Log("score " + score);

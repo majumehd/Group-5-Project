@@ -6,7 +6,8 @@ public class ProgressBar : FillBar
 {
     // Event to invoke when progress bar fills up
     private UnityEvent onProgressComplete;
-
+    GameObject Score; 
+    
     // Create a property to handle the slider's value
     public new float CurrentValue
     {
@@ -34,7 +35,7 @@ public class ProgressBar : FillBar
     // Update is called once per frame
     void Update()
     {
-        CurrentValue += 0.00153f;
+        CurrentValue = (GameObject.Find("Score").GetComponent<Scoring>().score) / 100;
     }
 
     void OnProgressComplete()

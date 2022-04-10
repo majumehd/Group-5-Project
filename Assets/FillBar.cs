@@ -10,7 +10,7 @@ public class FillBar : MonoBehaviour
     public Text displayText;
 
     //Create a property to handle the slider's value
-    private float currentValue = 0f;
+    private float currentValue = 0;
     public float CurrentValue
     {
         get
@@ -34,6 +34,6 @@ public class FillBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CurrentValue += 0.0043f;
+        CurrentValue += .0045f;
     }
 }
