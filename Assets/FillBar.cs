@@ -22,6 +22,7 @@ public class FillBar : MonoBehaviour
         {
             currentValue = value;
             slider.value = currentValue;
+            //Show percentage on progress bar in relation to value of slider
             displayText.text = (slider.value * 100).ToString("0.00") + "%";
         }
     }
@@ -34,6 +35,7 @@ public class FillBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CurrentValue += .0045f;
+        // Used to test bar works
+        // CurrentValue += .005f;
     }
 }
