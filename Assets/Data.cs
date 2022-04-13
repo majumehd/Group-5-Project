@@ -10,7 +10,7 @@ public class Data : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       states.Add("NewYork", "1,kroywen,It is on the east side");
+       states.Add("NewYork", "1,NEWYORK,It is on the east side");
     }
 
     public Dictionary<string,string> data()
