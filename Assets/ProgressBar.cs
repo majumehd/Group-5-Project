@@ -36,10 +36,9 @@ public class ProgressBar : FillBar
     {
         //Edit this value to change the scoring function in relation to the progress bar
         //Find the GameObject "Score", get the component "Scoring" (a script) from it, access the "score" value in it, then assign it to CurrentValue
-        if (DropItem.win)
-        {
-            CurrentValue = (GameObject.Find("Score").GetComponent<Scoring>().score) / 100;
-        }
+        
+            CurrentValue = (GameObject.Find("Score").GetComponent<Scoring>().score) / 1000;
+       
     }
 
     void OnProgressComplete()
