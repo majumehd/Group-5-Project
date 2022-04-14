@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Scramble_Word
+  - Canvas
+  - Slots
+  - UI Canvas
+  - SlotHolder
+  - Clear_Button
+  - Trivia
+  - T_Question
+  - T_Flag
+  - T_Fact
   layers:
   - Default
   - TransparentFX
@@ -11,8 +21,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Slots
+  - Background
   - 
   - 
   - 
@@ -38,6 +48,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3008913467
+    locked: 0
+  - name: Forground
+    uniqueID: 2191412569
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
