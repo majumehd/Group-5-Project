@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Menu.unity
+    guid: 9566f707358d81440932a0bfe179ffd3
+  - enabled: 1
+    path: Assets/Scenes/MainLevel.unity
+    guid: 1269ef86c080e1c4f9ee7b49fa657906
+  - enabled: 1
+    path: Assets/Scenes/Quiz.unity
+    guid: 4177a9df35386044593c9f768c873e64
+  - enabled: 1
+    path: Assets/Scenes/Survey-Pre.unity
+    guid: 4703a25a911197f4d8a491a953bd25cf
+  - enabled: 1
+    path: Assets/Scenes/Survey-Post.unity
+    guid: 7d85fe25bbc8bf34788c4ace55568b58
+  - enabled: 1
+    path: Assets/Scenes/LevelSelect.unity
+    guid: e95c634ff85089d4785b64e54e09996f
   m_configObjects: {}

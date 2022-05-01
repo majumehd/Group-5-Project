@@ -14,6 +14,8 @@ TagManager:
   - T_Question
   - T_Flag
   - T_Fact
+  - inputField
+  - input
   layers:
   - Default
   - TransparentFX
