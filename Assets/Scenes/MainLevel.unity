@@ -214,9 +214,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cdd4d5d2e5a84f43aa7b595a66583c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  question: {fileID: 0}
-  flag: {fileID: 0}
-  fact: {fileID: 0}
+  fact1: {fileID: 0}
+  image: {fileID: 0}
+  fact2: {fileID: 0}
 --- !u!1 &45307221
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,7 +950,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -70, y: -1.0000033}
+  m_AnchoredPosition: {x: -70, y: -1.0000038}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &263659600
@@ -1385,7 +1385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.16470589, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2689,7 +2689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.162251, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3616,7 +3616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -65, y: -1.0000033}
+  m_AnchoredPosition: {x: -65, y: -1.0000038}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &683586528
@@ -4101,8 +4101,8 @@ GameObject:
   - component: {fileID: 877679598}
   - component: {fileID: 877679601}
   m_Layer: 5
-  m_Name: Flag
-  m_TagString: T_Flag
+  m_Name: Image
+  m_TagString: T_Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5662,8 +5662,8 @@ GameObject:
   - component: {fileID: 1304903925}
   - component: {fileID: 1304903928}
   m_Layer: 5
-  m_Name: Fact
-  m_TagString: T_Fact
+  m_Name: Fact2
+  m_TagString: T_Fact2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6351,12 +6351,12 @@ SpriteRenderer:
   m_SortingLayerID: -1286053829
   m_SortingLayer: -2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 156dc5ab42ec7be4c9ad334f9b24b5d3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 392f6e4bcc10441e6962e7e415e9693f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 13.8, y: 7.67}
+  m_Size: {x: 20, y: 15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6370,8 +6370,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407746258}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0565, y: -0.1275, z: 0}
-  m_LocalScale: {x: 3.1476047, y: 2.9042158, z: 1}
+  m_LocalPosition: {x: 0.0022, y: 0.0107, z: 0}
+  m_LocalScale: {x: 0.75785804, y: 0.8038105, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -6390,8 +6390,8 @@ GameObject:
   - component: {fileID: 1434628074}
   - component: {fileID: 1434628077}
   m_Layer: 5
-  m_Name: Question
-  m_TagString: T_Question
+  m_Name: Fact1
+  m_TagString: T_Fact1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6923,7 +6923,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

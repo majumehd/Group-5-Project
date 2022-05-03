@@ -61,18 +61,18 @@ public class Letters : MonoBehaviour
     public void triviaInitializer()
     {
         //3 4 5
-        Text question = GameObject.FindGameObjectWithTag("T_Question").GetComponent<Button>().GetComponentInChildren<Text>();
-        Button flag = GameObject.FindGameObjectWithTag("T_Flag").GetComponent<Button>();
-        Text fact = GameObject.FindGameObjectWithTag("T_Fact").GetComponent<Button>().GetComponentInChildren<Text>();
+        Text fact1 = GameObject.FindGameObjectWithTag("T_Fact1").GetComponent<Button>().GetComponentInChildren<Text>();
+        Button image = GameObject.FindGameObjectWithTag("T_Image").GetComponent<Button>();
+        Text fact2 = GameObject.FindGameObjectWithTag("T_Fact2").GetComponent<Button>().GetComponentInChildren<Text>();
 
-        Sprite currentFlag = Resources.Load<Sprite>("Flags/NEWYORK");
+        Sprite currentImage = Resources.Load<Sprite>("Flags/NEWYORK");
         Debug.Log(values[3]);
         Debug.Log(values[4]);
         Debug.Log(values[5]);
-        question.text = values[3];
-        fact.text = values[4];
-        flag.GetComponent<Image>().sprite = currentFlag;
+        fact1.text = values[3];
+        fact2.text = values[4];
+        image.GetComponent<Image>().sprite = currentImage;
 
-        Debug.Log(currentFlag);
+        Debug.Log(currentImage);
     }
 }

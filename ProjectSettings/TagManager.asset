@@ -16,6 +16,9 @@ TagManager:
   - T_Fact
   - inputField
   - input
+  - T_Fact1
+  - T_Image
+  - T_Fact2
   layers:
   - Default
   - TransparentFX

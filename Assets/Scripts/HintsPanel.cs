@@ -5,43 +5,43 @@ using UnityEngine.UI;
 
 public class HintsPanel : MonoBehaviour
 {
-    public GameObject question;
-    public GameObject flag;
-    public GameObject fact;
+    public GameObject fact1;
+    public GameObject image;
+    public GameObject fact2;
 
     void Start()
     {
-        if(question == null || flag == null || fact == null)
+        if(fact1 == null || image == null || fact2 == null)
         {
-            question = GameObject.FindGameObjectWithTag("T_Question");
-            flag = GameObject.FindGameObjectWithTag("T_Flag");
-            fact = GameObject.FindGameObjectWithTag("T_Fact");
+            fact1 = GameObject.FindGameObjectWithTag("T_Fact1");
+            image = GameObject.FindGameObjectWithTag("T_Image");
+            fact2 = GameObject.FindGameObjectWithTag("T_Fact2");
         }
 
-        question.GetComponent<Button>().onClick.AddListener(questionClick);
-        flag.GetComponent<Button>().onClick.AddListener(flagClick);
-        fact.GetComponent<Button>().onClick.AddListener(factClick);
+        fact1.GetComponent<Button>().onClick.AddListener(fact1Click);
+        image.GetComponent<Button>().onClick.AddListener(imageClick);
+        fact2.GetComponent<Button>().onClick.AddListener(fact2Click);
     }
 
-    public void questionClick()
+    public void fact1Click()
     {
-        question.SetActive(false);
-        flag.SetActive(true);
-        fact.SetActive(false);
+        fact1.SetActive(false);
+        image.SetActive(true);
+        fact2.SetActive(false);
     }
 
-    public void flagClick()
+    public void imageClick()
     {
-        question.SetActive(false);
-        flag.SetActive(false);
-        fact.SetActive(true);
+        fact1.SetActive(false);
+        image.SetActive(false);
+        fact2.SetActive(true);
     }
 
-    public void factClick()
+    public void fact2Click()
     {
-        question.SetActive(true);
-        flag.SetActive(false);
-        fact.SetActive(false);
+        fact1.SetActive(true);
+        image.SetActive(false);
+        fact2.SetActive(false);
     }
 
 }
