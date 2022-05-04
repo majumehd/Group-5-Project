@@ -19,10 +19,12 @@ public class Scoring : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (DropItem.win)
+        if (AnswerHandler.win)
         {
-            DropItem.win = false;
+            AnswerHandler.win = false;
             AddPoints();
+            Data.generateQuestion();
+            Letters.next = true;
         }
     }
 

@@ -7,7 +7,7 @@ public class Letters : MonoBehaviour
 {
     public static int wordSize;
     public static int counter = 0;
-
+    public static bool next = false;
     public static string[] values;
 
     Dictionary<int, string> data = null;
@@ -15,12 +15,7 @@ public class Letters : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (data == null)
-        {
-            data = GameObject.Find("Question").GetComponent<Data>().data();
-            values = data[Data.currentQuestion].Split(',');
-            Debug.Log(data[1]);
-        }
+        dataUpdate();
        // displayPlaceHolder();
         triviaInitializer();
     }
@@ -28,7 +23,20 @@ public class Letters : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+        if (next)
+        {
+            dataUpdate();
+            // displayPlaceHolder();
+            triviaInitializer();
+            next = false;
+        }
+    }
+
+    public void dataUpdate()
+    {
+            data = GameObject.Find("Question").GetComponent<Data>().data();
+            values = data[Data.currentQuestion].Split(',');
+            Debug.Log(data[1]);
     }
 
     public void displayPlaceHolder()
@@ -61,11 +69,14 @@ public class Letters : MonoBehaviour
     public void triviaInitializer()
     {
         //3 4 5
+        string state = values[0];
+        Debug.Log(state);
+
         Text fact1 = GameObject.FindGameObjectWithTag("T_Fact1").GetComponent<Button>().GetComponentInChildren<Text>();
         Button image = GameObject.FindGameObjectWithTag("T_Image").GetComponent<Button>();
         Text fact2 = GameObject.FindGameObjectWithTag("T_Fact2").GetComponent<Button>().GetComponentInChildren<Text>();
 
-        Sprite currentImage = Resources.Load<Sprite>("Flags/NEWYORK");
+        Sprite currentImage = Resources.Load<Sprite>("Flags/"+state);
         Debug.Log(values[3]);
         Debug.Log(values[4]);
         Debug.Log(values[5]);

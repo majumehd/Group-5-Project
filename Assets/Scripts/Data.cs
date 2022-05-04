@@ -7,13 +7,17 @@ public class Data : MonoBehaviour
     //ID, random version, trivia
     Dictionary<int, string> states = new Dictionary<int, string>();
 
-    static public int currentQuestion = 1;
+    static public int currentQuestion;
+    static public int amountOfQuestions = 1;
 
     static public int levelPoints;
 
     // Start is called before the first frame update
     void Start()
     {
+
+       generateQuestion();
+
        states.Add(1, "NEWYORK, STATE CAPITAL: ALBANY, SLOGAN: THE \"EMPIRE STATE\", STATE FLOWER: ROSE, RATIFIED: JUL 26 1788, Flags/NEWYORK");
        states.Add(2, "ALABAMA, STATE CAPITAL: MONTGOMERY, SLOGAN: THE \"HEART OF DIXIE\", STATE FLOWER: CAMELLIA, RATIFIED: DEC 14 1819, Flags/ALABAMA");
        states.Add(3, "ALASKA, STATE CAPITAL: JUNEAU, SLOGAN: THE \"LAST FRONTIER\", STATE FLOWER: FORGET-ME-NOT, RATIFIED: JAN 3 1959, Flags/ALASKA");
@@ -71,7 +75,7 @@ public class Data : MonoBehaviour
        states.Add(45, "VERMONT, STATE CAPITAL: MONTPELIER, SLOGAN: THE \"GREEN MOUNTAIN STATE\", STATE FLOWER: RED CLOVER, RATIFIED: MAR 4 1791, Flags/VERMONT");
 
        states.Add(46, "VIRGINIA, STATE CAPITAL: RICHMOND, SLOGAN: THE \"OLD DOMINION STATE\", STATE FLOWER: AMERICAN DOGWOOD, RATIFIED: JUN 25 1788, Flags/VIRGINIA");
-       states.Add(47, "WASHHINGTON, STATE CAPITAL: OLYMPIA, SLOGAN: THE \"EVERGREEN STATE\", STATE FLOWER: PACIFIC RHODODENDRON, RATIFIED: NOV 11 1889, Flags/WASHINGTON");
+       states.Add(47, "WASHINGTON, STATE CAPITAL: OLYMPIA, SLOGAN: THE \"EVERGREEN STATE\", STATE FLOWER: PACIFIC RHODODENDRON, RATIFIED: NOV 11 1889, Flags/WASHINGTON");
        states.Add(48, "WEST VIRGINIA, STATE CAPITAL: CHARLESTON, SLOGAN: THE \"MOUNTAIN STATE\", STATE FLOWER: RHODODENDRON, RATIFIED: JUN 20 1863, Flags/WEST VIRGINIA");
        states.Add(49, "WISCONSIN, STATE CAPITAL: MADISON, SLOGAN: THE \"BADGER STATE\", STATE FLOWER: WOOD VIOLET, RATIFIED: MAY 29 1848, Flags/WISCONSIN");
        states.Add(50, "WYOMING, STATE CAPITAL: CHEYENNE, SLOGAN: THE \"EQUALITY STATE\", STATE FLOWER: INDIAN PAINTBRUSH, RATIFIED: JULY 10 1980, Flags/WYOMING");
@@ -88,5 +92,10 @@ public class Data : MonoBehaviour
     public void AssignPoints(int points)
     {
         levelPoints = points;
+    }
+
+    public static void generateQuestion()
+    {
+        currentQuestion = Random.Range(1, 51);
     }
 }

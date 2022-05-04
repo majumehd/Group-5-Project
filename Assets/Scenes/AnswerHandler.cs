@@ -19,10 +19,11 @@ public class AnswerHandler : MonoBehaviour
         if (finish && !win)
         {
             Debug.Log(input);
-            if (input.ToUpper() == "NEWYORK")
+            if (input.ToUpper() == Letters.values[0])
             {
                 Debug.Log("CONGRATS");
                 win = true;
+                finish = false;
             }
             else
             {
@@ -37,5 +38,13 @@ public class AnswerHandler : MonoBehaviour
         input = inputField.text;
         finish = true;
        // Debug.Log(input);
+    }
+
+    public void LetterClick(string letter)
+    {
+        Text inputField = GameObject.FindGameObjectWithTag("input").GetComponent<Text>();
+        inputField.text = "A";
+
+        Debug.Log(letter);
     }
 }
