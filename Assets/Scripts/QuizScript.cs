@@ -71,13 +71,13 @@ public class QuizScript : MonoBehaviour
         //3 4 5
         string state = values[0];
         Debug.Log("Calling state");
-        Debug.Log(state);
+        Debug.Log(values[5]);
 
         Text fact1 = GameObject.FindGameObjectWithTag("T_Fact1").GetComponent<Button>().GetComponentInChildren<Text>();
         Button image = GameObject.FindGameObjectWithTag("T_Image").GetComponent<Button>();
         Text fact2 = GameObject.FindGameObjectWithTag("T_Fact2").GetComponent<Button>().GetComponentInChildren<Text>();
 
-        Sprite currentImage = Resources.Load<Sprite>("Flags/" + state);
+        Sprite currentImage = Resources.Load<Sprite>(values[5]);
         Debug.Log(values[3]);
         Debug.Log(values[1]);
         Debug.Log(values[5]);

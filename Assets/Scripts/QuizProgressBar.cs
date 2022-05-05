@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-public class ProgressBar : FillBar
+public class QuizProgressBar : FillBar
 {
     // Event to invoke when progress bar fills up
     private UnityEvent onProgressComplete;
@@ -32,7 +32,7 @@ public class ProgressBar : FillBar
         if (onProgressComplete == null)
             onProgressComplete = new UnityEvent();
         onProgressComplete.AddListener(OnProgressComplete);
-        maxScore = Data.levelPoints * 5;
+        maxScore = 100 * 7;
 
 
     }
@@ -43,7 +43,7 @@ public class ProgressBar : FillBar
         //Edit this value to change the scoring function in relation to the progress bar
         //Find the GameObject "Score", get the component "Scoring" (a script) from it, access the "score" value in it, then assign it to CurrentValue
 
-        CurrentValue = ((GameObject.Find("Question").GetComponent<Scoring>().score) / maxScore);
+        CurrentValue = ((GameObject.Find("Question").GetComponent<QuizScoring>().score) / maxScore);
         // CurrentValue += .005f;
     }
 

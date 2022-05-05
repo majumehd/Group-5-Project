@@ -75,7 +75,7 @@ public class Letters : MonoBehaviour
         Button image = GameObject.FindGameObjectWithTag("T_Image").GetComponent<Button>();
         Text fact2 = GameObject.FindGameObjectWithTag("T_Fact2").GetComponent<Button>().GetComponentInChildren<Text>();
 
-        Sprite currentImage = Resources.Load<Sprite>("Flags/"+state);
+        Sprite currentImage = Resources.Load<Sprite>(values[5]);
         Debug.Log(values[3]);
         Debug.Log(values[4]);
         Debug.Log(values[5]);
