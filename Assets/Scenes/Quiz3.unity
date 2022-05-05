@@ -161,8 +161,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -203.00003, y: -128}
-  m_SizeDelta: {x: -452.47, y: -279.63}
+  m_AnchoredPosition: {x: -201.88998, y: -138.29999}
+  m_SizeDelta: {x: -438.48, y: -292.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &12425436
 MonoBehaviour:
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -227,7 +227,6 @@ GameObject:
   m_Component:
   - component: {fileID: 45307222}
   - component: {fileID: 45307223}
-  - component: {fileID: 45307224}
   m_Layer: 0
   m_Name: Question
   m_TagString: Scramble_Word
@@ -261,21 +260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0606729664e7d949a1a2174fe1c815d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &45307224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45307221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99ea774646b201044b043cc85483cfe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
-  DEFAULT_POINTS: 0
-  scoreTxt: {fileID: 0}
 --- !u!1 &55364540
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,6 +378,7 @@ GameObject:
   - component: {fileID: 63563363}
   - component: {fileID: 63563362}
   - component: {fileID: 63563367}
+  - component: {fileID: 63563366}
   - component: {fileID: 63563368}
   - component: {fileID: 63563369}
   m_Layer: 5
@@ -466,19 +451,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 63563363}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &63563363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -517,6 +490,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63563360}
   m_CullTransparentMesh: 1
+--- !u!114 &63563366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63563360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &63563367
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -668,6 +654,7 @@ GameObject:
   - component: {fileID: 200954129}
   - component: {fileID: 200954128}
   - component: {fileID: 200954133}
+  - component: {fileID: 200954132}
   - component: {fileID: 200954134}
   - component: {fileID: 200954135}
   m_Layer: 5
@@ -740,19 +727,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 200954129}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &200954129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -791,6 +766,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200954126}
   m_CullTransparentMesh: 1
+--- !u!114 &200954132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200954126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &200954133
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -884,7 +872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -65, y: -1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &236967945
@@ -962,7 +950,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -70, y: -1.0000038}
+  m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &263659600
@@ -1397,7 +1385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.16470589, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1565,8 +1553,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 188.5, y: -158}
-  m_SizeDelta: {x: -402.16, y: -345.97}
+  m_AnchoredPosition: {x: 197.16, y: -165.13}
+  m_SizeDelta: {x: -409.15, y: -345.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &484705575
 MonoBehaviour:
@@ -1581,7 +1569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.56078434}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1721,7 +1709,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44d70c5272e7f7e4e82e9287f848c764, type: 3}
+  m_Script: {fileID: 11500000, guid: 1628ecfc5a15166479bfc1f67004cede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!20 &519420031
@@ -1873,8 +1861,8 @@ GameObject:
   - component: {fileID: 545307521}
   - component: {fileID: 545307520}
   m_Layer: 5
-  m_Name: Submit
-  m_TagString: Untagged
+  m_Name: Button
+  m_TagString: Clear_Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1896,9 +1884,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 330, y: 0.0000027418}
-  m_SizeDelta: {x: 73.2, y: 49.93}
-  m_Pivot: {x: 0.5, y: 0.50000006}
+  m_AnchoredPosition: {x: 355.46, y: -66.18}
+  m_SizeDelta: {x: 58.97, y: 42.75}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &545307520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1942,19 +1930,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 545307521}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 670042161}
-        m_TargetAssemblyTypeName: QuizAnswer, Assembly-CSharp
-        m_MethodName: OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &545307521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2085,6 +2061,7 @@ GameObject:
   - component: {fileID: 596605339}
   - component: {fileID: 596605338}
   - component: {fileID: 596605343}
+  - component: {fileID: 596605342}
   - component: {fileID: 596605344}
   - component: {fileID: 596605345}
   m_Layer: 5
@@ -2157,31 +2134,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 596605339}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: A
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &596605339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2220,6 +2173,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596605336}
   m_CullTransparentMesh: 1
+--- !u!114 &596605342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596605336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &596605343
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2292,6 +2258,7 @@ GameObject:
   - component: {fileID: 600655209}
   - component: {fileID: 600655208}
   - component: {fileID: 600655213}
+  - component: {fileID: 600655212}
   - component: {fileID: 600655214}
   - component: {fileID: 600655215}
   m_Layer: 5
@@ -2364,19 +2331,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 600655209}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &600655209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2415,6 +2370,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600655206}
   m_CullTransparentMesh: 1
+--- !u!114 &600655212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600655206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &600655213
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2487,6 +2455,7 @@ GameObject:
   - component: {fileID: 608711612}
   - component: {fileID: 608711611}
   - component: {fileID: 608711616}
+  - component: {fileID: 608711615}
   - component: {fileID: 608711617}
   - component: {fileID: 608711618}
   m_Layer: 5
@@ -2559,19 +2528,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 608711612}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &608711612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2610,6 +2567,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608711609}
   m_CullTransparentMesh: 1
+--- !u!114 &608711615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608711609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &608711616
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2719,7 +2689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.162251, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2761,6 +2731,7 @@ GameObject:
   - component: {fileID: 621947170}
   - component: {fileID: 621947169}
   - component: {fileID: 621947174}
+  - component: {fileID: 621947173}
   - component: {fileID: 621947175}
   - component: {fileID: 621947176}
   m_Layer: 5
@@ -2833,19 +2804,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 621947170}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &621947170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2884,6 +2843,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621947167}
   m_CullTransparentMesh: 1
+--- !u!114 &621947173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621947167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &621947174
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2956,6 +2928,7 @@ GameObject:
   - component: {fileID: 624187958}
   - component: {fileID: 624187957}
   - component: {fileID: 624187962}
+  - component: {fileID: 624187961}
   - component: {fileID: 624187963}
   - component: {fileID: 624187964}
   m_Layer: 5
@@ -3028,19 +3001,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 624187958}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &624187958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3079,6 +3040,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624187955}
   m_CullTransparentMesh: 1
+--- !u!114 &624187961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624187955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &624187962
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3151,6 +3125,7 @@ GameObject:
   - component: {fileID: 648089869}
   - component: {fileID: 648089868}
   - component: {fileID: 648089873}
+  - component: {fileID: 648089872}
   - component: {fileID: 648089874}
   - component: {fileID: 648089875}
   m_Layer: 5
@@ -3223,19 +3198,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 648089869}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &648089869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3274,6 +3237,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648089866}
   m_CullTransparentMesh: 1
+--- !u!114 &648089872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648089866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &648089873
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3346,6 +3322,7 @@ GameObject:
   - component: {fileID: 663637020}
   - component: {fileID: 663637019}
   - component: {fileID: 663637024}
+  - component: {fileID: 663637023}
   - component: {fileID: 663637025}
   - component: {fileID: 663637026}
   m_Layer: 5
@@ -3418,19 +3395,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 663637020}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &663637020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3469,6 +3434,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663637017}
   m_CullTransparentMesh: 1
+--- !u!114 &663637023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663637017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &663637024
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3539,7 +3517,6 @@ GameObject:
   - component: {fileID: 670042158}
   - component: {fileID: 670042160}
   - component: {fileID: 670042159}
-  - component: {fileID: 670042161}
   m_Layer: 5
   m_Name: Answers
   m_TagString: SlotHolder
@@ -3559,13 +3536,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 545307519}
-  - {fileID: 801636624}
   m_Father: {fileID: 55364544}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.3049927, y: 68.265}
+  m_AnchoredPosition: {x: 2.3049927, y: 55.850006}
   m_SizeDelta: {x: -30.1, y: -440.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &670042159
@@ -3581,7 +3557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.4117647}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3606,18 +3582,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670042157}
   m_CullTransparentMesh: 1
---- !u!114 &670042161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670042157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d769f2a095eb3940a853807abeb260d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &683586526
 GameObject:
   m_ObjectHideFlags: 0
@@ -3652,7 +3616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -65, y: -1.0000038}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &683586528
@@ -3727,8 +3691,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -68.63, y: -2.6300035}
-  m_SizeDelta: {x: 234.57, y: 33.27}
+  m_AnchoredPosition: {x: -2.56, y: -1.63}
+  m_SizeDelta: {x: 215.65, y: 33.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &782563149
 MonoBehaviour:
@@ -3767,149 +3731,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 782563147}
-  m_CullTransparentMesh: 1
---- !u!1 &801636623
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 801636624}
-  - component: {fileID: 801636627}
-  - component: {fileID: 801636626}
-  - component: {fileID: 801636625}
-  m_Layer: 5
-  m_Name: InputField
-  m_TagString: inputField
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &801636624
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801636623}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2070401287}
-  - {fileID: 1781244419}
-  m_Father: {fileID: 670042158}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -47.2, y: 0}
-  m_SizeDelta: {x: 639.13, y: 71.96}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &801636625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801636623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d199490a83bb2b844b9695cbf13b01ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 801636626}
-  m_TextComponent: {fileID: 1781244420}
-  m_Placeholder: {fileID: 2070401288}
-  m_ContentType: 0
-  m_InputType: 0
-  m_AsteriskChar: 42
-  m_KeyboardType: 0
-  m_LineType: 0
-  m_HideMobileInput: 0
-  m_CharacterValidation: 0
-  m_CharacterLimit: 0
-  m_OnEndEdit:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_CustomCaretColor: 0
-  m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 
-  m_CaretBlinkRate: 0.85
-  m_CaretWidth: 1
-  m_ReadOnly: 0
-  m_ShouldActivateOnSelect: 1
---- !u!114 &801636626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801636623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &801636627
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801636623}
   m_CullTransparentMesh: 1
 --- !u!1 &830502207
 GameObject:
@@ -4003,6 +3824,7 @@ GameObject:
   - component: {fileID: 857002788}
   - component: {fileID: 857002787}
   - component: {fileID: 857002792}
+  - component: {fileID: 857002791}
   - component: {fileID: 857002793}
   - component: {fileID: 857002794}
   m_Layer: 5
@@ -4075,19 +3897,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 857002788}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &857002788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4126,6 +3936,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857002785}
   m_CullTransparentMesh: 1
+--- !u!114 &857002791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857002785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &857002792
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4278,8 +4101,8 @@ GameObject:
   - component: {fileID: 877679598}
   - component: {fileID: 877679601}
   m_Layer: 5
-  m_Name: Image
-  m_TagString: T_Image
+  m_Name: Flag
+  m_TagString: T_Flag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4300,7 +4123,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.54049253, y: 0.0024991035}
+  m_AnchoredPosition: {x: -5.7905, y: -5.6675}
   m_SizeDelta: {x: 319.08, y: 210.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &877679598
@@ -4576,6 +4399,7 @@ GameObject:
   - component: {fileID: 1096631433}
   - component: {fileID: 1096631432}
   - component: {fileID: 1096631437}
+  - component: {fileID: 1096631436}
   - component: {fileID: 1096631438}
   - component: {fileID: 1096631439}
   m_Layer: 5
@@ -4648,19 +4472,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1096631433}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1096631433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4699,6 +4511,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096631430}
   m_CullTransparentMesh: 1
+--- !u!114 &1096631436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096631430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &1096631437
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4850,6 +4675,7 @@ GameObject:
   - component: {fileID: 1148212241}
   - component: {fileID: 1148212240}
   - component: {fileID: 1148212245}
+  - component: {fileID: 1148212244}
   - component: {fileID: 1148212246}
   - component: {fileID: 1148212247}
   m_Layer: 5
@@ -4922,19 +4748,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1148212241}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1148212241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4973,6 +4787,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148212238}
   m_CullTransparentMesh: 1
+--- !u!114 &1148212244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148212238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &1148212245
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5282,6 +5109,7 @@ GameObject:
   - component: {fileID: 1217604930}
   - component: {fileID: 1217604929}
   - component: {fileID: 1217604934}
+  - component: {fileID: 1217604933}
   - component: {fileID: 1217604935}
   - component: {fileID: 1217604936}
   m_Layer: 5
@@ -5354,19 +5182,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1217604930}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1217604930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5405,6 +5221,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1217604927}
   m_CullTransparentMesh: 1
+--- !u!114 &1217604933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217604927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &1217604934
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5635,6 +5464,7 @@ GameObject:
   - component: {fileID: 1280026540}
   - component: {fileID: 1280026539}
   - component: {fileID: 1280026544}
+  - component: {fileID: 1280026543}
   - component: {fileID: 1280026545}
   - component: {fileID: 1280026546}
   m_Layer: 5
@@ -5707,19 +5537,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1280026540}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1280026540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5758,6 +5576,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280026537}
   m_CullTransparentMesh: 1
+--- !u!114 &1280026543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280026537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &1280026544
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5831,8 +5662,8 @@ GameObject:
   - component: {fileID: 1304903925}
   - component: {fileID: 1304903928}
   m_Layer: 5
-  m_Name: Fact2
-  m_TagString: T_Fact2
+  m_Name: Fact
+  m_TagString: T_Fact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5854,7 +5685,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.53999233, y: 0.0024991035}
+  m_AnchoredPosition: {x: -5.79, y: -5.6675}
   m_SizeDelta: {x: 319.08, y: 210.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1304903925
@@ -5976,6 +5807,7 @@ GameObject:
   - component: {fileID: 1312492392}
   - component: {fileID: 1312492391}
   - component: {fileID: 1312492396}
+  - component: {fileID: 1312492395}
   - component: {fileID: 1312492397}
   - component: {fileID: 1312492398}
   m_Layer: 5
@@ -6048,19 +5880,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1312492392}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1312492392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6099,6 +5919,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312492389}
   m_CullTransparentMesh: 1
+--- !u!114 &1312492395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312492389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &1312492396
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -6171,6 +6004,7 @@ GameObject:
   - component: {fileID: 1373978194}
   - component: {fileID: 1373978193}
   - component: {fileID: 1373978198}
+  - component: {fileID: 1373978197}
   - component: {fileID: 1373978199}
   - component: {fileID: 1373978200}
   m_Layer: 5
@@ -6243,19 +6077,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1373978194}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1373978194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6294,6 +6116,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1373978191}
   m_CullTransparentMesh: 1
+--- !u!114 &1373978197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373978191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &1373978198
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -6391,8 +6226,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 223.68, y: 226.43}
-  m_SizeDelta: {x: 227.31, y: 59.65}
+  m_AnchoredPosition: {x: 190, y: 224}
+  m_SizeDelta: {x: 201.57, y: 59.655}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1400774539
 MonoBehaviour:
@@ -6516,12 +6351,12 @@ SpriteRenderer:
   m_SortingLayerID: -1286053829
   m_SortingLayer: -2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 392f6e4bcc10441e6962e7e415e9693f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2ffe980eb390942569e7045e410deaaf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 20, y: 15}
+  m_Size: {x: 15, y: 15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6535,8 +6370,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407746258}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.019, y: 0.0275, z: 0}
-  m_LocalScale: {x: 0.937982, y: 0.81502074, z: 1}
+  m_LocalPosition: {x: 0.0051, y: -0.0111, z: 0}
+  m_LocalScale: {x: 1.01178, y: 0.8064183, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -6555,8 +6390,8 @@ GameObject:
   - component: {fileID: 1434628074}
   - component: {fileID: 1434628077}
   m_Layer: 5
-  m_Name: Fact1
-  m_TagString: T_Fact1
+  m_Name: Question
+  m_TagString: T_Question
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6578,7 +6413,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3, y: 0}
+  m_AnchoredPosition: {x: -8.25, y: -5.67}
   m_SizeDelta: {x: 314.16, y: 210.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1434628074
@@ -6775,6 +6610,7 @@ GameObject:
   - component: {fileID: 1468039745}
   - component: {fileID: 1468039744}
   - component: {fileID: 1468039749}
+  - component: {fileID: 1468039748}
   - component: {fileID: 1468039750}
   - component: {fileID: 1468039751}
   m_Layer: 5
@@ -6847,19 +6683,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1468039745}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1468039745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6898,6 +6722,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1468039742}
   m_CullTransparentMesh: 1
+--- !u!114 &1468039748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468039742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &1468039749
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7086,7 +6923,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -7256,6 +7093,7 @@ GameObject:
   - component: {fileID: 1541719562}
   - component: {fileID: 1541719561}
   - component: {fileID: 1541719566}
+  - component: {fileID: 1541719565}
   - component: {fileID: 1541719567}
   - component: {fileID: 1541719568}
   m_Layer: 5
@@ -7328,19 +7166,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1541719562}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1541719562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7379,6 +7205,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541719559}
   m_CullTransparentMesh: 1
+--- !u!114 &1541719565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541719559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &1541719566
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7451,6 +7290,7 @@ GameObject:
   - component: {fileID: 1584012418}
   - component: {fileID: 1584012417}
   - component: {fileID: 1584012422}
+  - component: {fileID: 1584012421}
   - component: {fileID: 1584012423}
   - component: {fileID: 1584012424}
   m_Layer: 5
@@ -7523,19 +7363,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1584012418}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1584012418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7574,6 +7402,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584012415}
   m_CullTransparentMesh: 1
+--- !u!114 &1584012421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584012415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &1584012422
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7773,6 +7614,7 @@ GameObject:
   - component: {fileID: 1617317142}
   - component: {fileID: 1617317141}
   - component: {fileID: 1617317146}
+  - component: {fileID: 1617317145}
   - component: {fileID: 1617317147}
   - component: {fileID: 1617317148}
   m_Layer: 5
@@ -7845,19 +7687,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1617317142}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1617317142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7896,6 +7726,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617317139}
   m_CullTransparentMesh: 1
+--- !u!114 &1617317145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617317139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &1617317146
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -8205,7 +8048,7 @@ GameObject:
   - component: {fileID: 1713800883}
   m_Layer: 5
   m_Name: Score Text
-  m_TagString: score
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8218,7 +8061,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1713800881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -779.3259}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1715140750}
@@ -8226,7 +8069,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13.152, y: 1.9559}
+  m_AnchoredPosition: {x: 11.479003, y: 3.9114}
   m_SizeDelta: {x: 180.16, y: 28.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1713800883
@@ -8282,6 +8125,7 @@ GameObject:
   - component: {fileID: 1715140750}
   - component: {fileID: 1715140753}
   - component: {fileID: 1715140752}
+  - component: {fileID: 1715140751}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -8308,9 +8152,23 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -186, y: 219}
+  m_AnchoredPosition: {x: -167.55, y: 217.57}
   m_SizeDelta: {x: 153.85, y: 29.73}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1715140751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715140749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bca687b0196104545807f124a6de470a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  scoreTxt: {fileID: 1713800883}
 --- !u!114 &1715140752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8366,6 +8224,7 @@ GameObject:
   - component: {fileID: 1722090147}
   - component: {fileID: 1722090146}
   - component: {fileID: 1722090151}
+  - component: {fileID: 1722090150}
   - component: {fileID: 1722090152}
   - component: {fileID: 1722090153}
   m_Layer: 5
@@ -8438,19 +8297,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1722090147}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1722090147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8489,6 +8336,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722090144}
   m_CullTransparentMesh: 1
+--- !u!114 &1722090150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722090144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &1722090151
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -8627,85 +8487,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748004740}
   m_CullTransparentMesh: 1
---- !u!1 &1781244418
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1781244419}
-  - component: {fileID: 1781244421}
-  - component: {fileID: 1781244420}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: input
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1781244419
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1781244418}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 801636624}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.5}
-  m_SizeDelta: {x: -20, y: -13}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1781244420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1781244418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 50
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 0
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 
---- !u!222 &1781244421
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1781244418}
-  m_CullTransparentMesh: 1
 --- !u!1 &1787144749
 GameObject:
   m_ObjectHideFlags: 0
@@ -8798,6 +8579,7 @@ GameObject:
   - component: {fileID: 1825622864}
   - component: {fileID: 1825622863}
   - component: {fileID: 1825622868}
+  - component: {fileID: 1825622867}
   - component: {fileID: 1825622869}
   - component: {fileID: 1825622870}
   m_Layer: 5
@@ -8870,19 +8652,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1825622864}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1825622864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8921,6 +8691,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1825622861}
   m_CullTransparentMesh: 1
+--- !u!114 &1825622867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825622861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &1825622868
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -8993,6 +8776,7 @@ GameObject:
   - component: {fileID: 1891467950}
   - component: {fileID: 1891467949}
   - component: {fileID: 1891467954}
+  - component: {fileID: 1891467953}
   - component: {fileID: 1891467955}
   - component: {fileID: 1891467956}
   m_Layer: 5
@@ -9065,19 +8849,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1891467950}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1891467950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9116,6 +8888,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891467947}
   m_CullTransparentMesh: 1
+--- !u!114 &1891467953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891467947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &1891467954
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9188,6 +8973,7 @@ GameObject:
   - component: {fileID: 1913145823}
   - component: {fileID: 1913145822}
   - component: {fileID: 1913145827}
+  - component: {fileID: 1913145826}
   - component: {fileID: 1913145828}
   - component: {fileID: 1913145829}
   m_Layer: 5
@@ -9260,19 +9046,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1913145823}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1913145823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9311,6 +9085,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913145820}
   m_CullTransparentMesh: 1
+--- !u!114 &1913145826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913145820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &1913145827
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9429,10 +9216,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 0
+    m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -9440,7 +9227,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter
+  m_Text: Clear
 --- !u!222 &1995872177
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9620,6 +9407,7 @@ GameObject:
   - component: {fileID: 2062549698}
   - component: {fileID: 2062549697}
   - component: {fileID: 2062549702}
+  - component: {fileID: 2062549701}
   - component: {fileID: 2062549703}
   - component: {fileID: 2062549704}
   m_Layer: 5
@@ -9692,19 +9480,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2062549698}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2062549698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9743,6 +9519,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062549695}
   m_CullTransparentMesh: 1
+--- !u!114 &2062549701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062549695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &2062549702
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9802,85 +9591,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!1 &2070401286
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2070401287}
-  - component: {fileID: 2070401289}
-  - component: {fileID: 2070401288}
-  m_Layer: 5
-  m_Name: Placeholder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2070401287
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2070401286}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 801636624}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.5}
-  m_SizeDelta: {x: -20, y: -13}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2070401288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2070401286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.5}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
-    m_FontStyle: 2
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 50
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Enter Your Guess...
---- !u!222 &2070401289
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2070401286}
-  m_CullTransparentMesh: 1
 --- !u!1 &2145799912
 GameObject:
   m_ObjectHideFlags: 0
@@ -9894,6 +9604,7 @@ GameObject:
   - component: {fileID: 2145799915}
   - component: {fileID: 2145799914}
   - component: {fileID: 2145799919}
+  - component: {fileID: 2145799918}
   - component: {fileID: 2145799920}
   - component: {fileID: 2145799921}
   m_Layer: 5
@@ -9966,19 +9677,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2145799915}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnswerHandler, Assembly-CSharp
-        m_MethodName: LetterClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NEWYORK
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2145799915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10017,6 +9716,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145799912}
   m_CullTransparentMesh: 1
+--- !u!114 &2145799918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145799912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96392f5039c4314486beeb1ffa13e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 55364543}
 --- !u!225 &2145799919
 CanvasGroup:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class OpenUrl : MonoBehaviour
 
     public void Open()
     {
+        //Opens the URL for the survey
         Application.OpenURL(Url);
     }
 }

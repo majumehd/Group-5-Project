@@ -23,6 +23,7 @@ public class HintsPanel : MonoBehaviour
         fact2.GetComponent<Button>().onClick.AddListener(fact2Click);
     }
 
+    //Based on which component you are looking at, it deactivates the others
     public void fact1Click()
     {
         fact1.SetActive(false);

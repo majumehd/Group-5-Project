@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Scoring : MonoBehaviour
+public class QuizScoring : MonoBehaviour
 {
     [SerializeField] public float score = 0;
     //Change value of DEFAULT_POINTS by whatever we decide for in our scoring system per correct answer
     public float DEFAULT_POINTS;
     [SerializeField] Text scoreTxt;
     // Start is called before the first frame update
-    public static Scoring Instance;
+    public static QuizScoring Instance;
 
     void Awake()
     {
@@ -19,7 +19,7 @@ public class Scoring : MonoBehaviour
         {
             DontDestroyOnLoad(this);
             Instance = this;
-            
+
         }
         else
         {
@@ -29,20 +29,25 @@ public class Scoring : MonoBehaviour
     void Start()
     {
         Debug.Log("Score from instance");
-        Debug.Log(Scoring.Instance.score);
-        Scoring.Instance.DEFAULT_POINTS = Data.levelPoints;
-        Scoring.Instance.DisplayScore();
+        Debug.Log(QuizScoring.Instance.score);
+        QuizScoring.Instance.DEFAULT_POINTS = 100;
+        QuizScoring.Instance.DisplayScore();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (AnswerHandler.win)
+        if (QuizAnswer.win)
         {
-            AnswerHandler.win = false;
-            Scoring.Instance.AddPoints();
+            Debug.Log("Scoring");
+            QuizAnswer.win = false;
+            QuizScoring.Instance.AddPoints();
             Data.generateQuestion();
-            Letters.next = true;
+            QuizScript.next = true;
+            if (QuizScoring.Instance.score == 700.0)
+            {
+                SceneManager.LoadScene(4, LoadSceneMode.Single);
+            }
         }
     }
 
@@ -51,8 +56,8 @@ public class Scoring : MonoBehaviour
     {
         score += points;
         Debug.Log("score " + score);
-        Scoring.Instance.DisplayScore();
-       
+        QuizScoring.Instance.DisplayScore();
+
     }
     public void AddPoints()
     {
@@ -62,6 +67,6 @@ public class Scoring : MonoBehaviour
     {
         scoreTxt = GameObject.FindGameObjectWithTag("score").GetComponent<Text>();
 
-        scoreTxt.text = "Score: " + Scoring.Instance.score;
+        scoreTxt.text = "Score: " + QuizScoring.Instance.score;
     }
 }

@@ -19,6 +19,7 @@ TagManager:
   - T_Fact1
   - T_Image
   - T_Fact2
+  - score
   layers:
   - Default
   - TransparentFX
