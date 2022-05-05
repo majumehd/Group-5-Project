@@ -10,6 +10,7 @@ public class Scoring : MonoBehaviour
     //Change value of DEFAULT_POINTS by whatever we decide for in our scoring system per correct answer
     const float DEFAULT_POINTS = 100;
     [SerializeField] Text scoreTxt;
+   
     // Start is called before the first frame update
     void Start()
     {
