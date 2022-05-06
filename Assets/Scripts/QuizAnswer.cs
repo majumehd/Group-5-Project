@@ -97,7 +97,7 @@ public class QuizAnswer : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
