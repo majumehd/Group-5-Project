@@ -48,7 +48,9 @@ public class QuizScoring : MonoBehaviour
             {
                 SceneManager.LoadScene(4, LoadSceneMode.Single);
             }
+          
         }
+        QuizScoring.Instance.DisplayScore();
     }
 
     //Function to add points to score by value in "points"

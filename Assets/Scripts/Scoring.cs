@@ -44,6 +44,7 @@ public class Scoring : MonoBehaviour
             Data.generateQuestion();
             Letters.next = true;
         }
+        DisplayScore();
     }
 
     //Function to add points to score by value in "points"

@@ -10,6 +10,9 @@ public class AnswerHandler : MonoBehaviour
     public static string input;
     public static bool finish = false;
     public static bool win = false;
+    public InputField answerInput;
+    public Text correctTxt;
+    public Text incorrectTxt;
     void Start()
     {
        if(inputField == null)
@@ -19,10 +22,11 @@ public class AnswerHandler : MonoBehaviour
 
     void Update()
     {
-        if (finish && !win)
+       /* if (finish && !win)
         {
             Debug.Log(input);
-            if (input.ToUpper() == Letters.values[0])
+            
+            if (answerInput.text.ToUpper() == Letters.values[0])
             {
                 Debug.Log("CONGRATS");
                 win = true;
@@ -31,25 +35,86 @@ public class AnswerHandler : MonoBehaviour
             }
             else
             {
+            
                 finish = false;
+                answerInput.text = "";
+                incorrectTxt.StartCoroutine(FadeIncorrect());
             }
-        }
+
+        }*/
+
+        
+
     }
 
     public void OnClick()
     {
-        
-        input = inputField.text;
+
+        input = answerInput.text;
         finish = true;
-        
-       // Debug.Log(input);
+        if (finish && !win)
+        {
+            Debug.Log(input);
+            if (answerInput.text.ToUpper() == Letters.values[0])
+            {
+                StartCoroutine(Correct());
+
+            }
+            else
+            {
+                finish = false;
+                answerInput.text = "";
+                incorrectTxt.StartCoroutine(FadeIncorrect());
+
+            }
+        }
     }
 
-    public void LetterClick(string letter)
+
+        public void LetterClick(string letter)
     {
         Text inputField = GameObject.FindGameObjectWithTag("input").GetComponent<Text>();
         inputField.text = "A";
 
         Debug.Log(letter);
+    }
+    IEnumerator Correct()
+    {
+        Debug.Log("CONGRATS");
+        win = true;
+        finish = false;
+
+        for (float i = 0; i <= 1; i += Time.deltaTime)
+        {
+            // set color with i as alpha
+            correctTxt.color = new Color(1, 1, 1, i);
+            yield return null;
+        }
+        for (float i = 1; i >= 0; i -= Time.deltaTime)
+        {
+            // set color with i as alpha
+            correctTxt.color = new Color(1, 1, 1, i);
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    IEnumerator FadeIncorrect()
+    {
+        for (float i = 0; i <= 1; i += Time.deltaTime)
+        {
+            // set color with i as alpha
+            incorrectTxt.color = new Color(1, 1, 1, i);
+            yield return null;
+        }
+        for (float i = 1; i >= 0; i -= Time.deltaTime)
+        {
+            // set color with i as alpha
+            incorrectTxt.color = new Color(1, 1, 1, i);
+            yield return null;
+        }
     }
 }
