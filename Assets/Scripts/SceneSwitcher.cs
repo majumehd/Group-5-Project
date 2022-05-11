@@ -46,4 +46,9 @@ public class SceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene(5, LoadSceneMode.Single);
     }
+
+    public void playSettings()
+    {
+            SceneManager.LoadScene("settings");
+    }
 }
