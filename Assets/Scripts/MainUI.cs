@@ -51,7 +51,7 @@ public class MainUI : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("mainMenu");
+        SceneManager.LoadScene("Menu");
     }
 
 }
