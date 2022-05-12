@@ -22,9 +22,24 @@ public class SceneSwitcher : MonoBehaviour
     }
 
     //Shows the scene for the instructions
-    public void playInstructions()
+    public void playInstructions1()
     {
-        SceneManager.LoadScene(5, LoadSceneMode.Single);
+        SceneManager.LoadScene(8, LoadSceneMode.Single);
+    }
+
+    public void playInstructions2()
+    {
+        SceneManager.LoadScene(9, LoadSceneMode.Single);
+    }
+
+    public void playInstructions3()
+    {
+        SceneManager.LoadScene(10, LoadSceneMode.Single);
+    }
+
+    public void playInstructions4()
+    {
+        SceneManager.LoadScene(11, LoadSceneMode.Single);
     }
 
     //Hosts the menu for the game
