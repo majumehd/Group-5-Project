@@ -80,7 +80,7 @@ public class AnswerHandler : MonoBehaviour
     IEnumerator Correct()
     {
         Debug.Log("CONGRATS");
-        win = true;
+        
         finish = false;
 
         for (float i = 0; i <= 1; i += Time.deltaTime)
@@ -97,8 +97,8 @@ public class AnswerHandler : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0);
-
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        win = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         
     }
 

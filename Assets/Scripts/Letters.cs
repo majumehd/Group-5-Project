@@ -9,7 +9,6 @@ public class Letters : MonoBehaviour
     public static int counter = 0;
     public static bool next = false;
     public static string[] values;
-
     public Text fact1;
     public Button image;
     public Text fact2;
@@ -89,7 +88,7 @@ public class Letters : MonoBehaviour
         Debug.Log(values[5]);
         
         fact1.text = values[3];
-        fact2.text = values[4];
+        fact2.text = values[2];
         image.GetComponent<Image>().sprite = currentImage;
 
         Debug.Log(currentImage);
