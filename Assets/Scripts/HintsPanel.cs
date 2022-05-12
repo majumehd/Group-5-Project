@@ -19,7 +19,7 @@ public class HintsPanel : MonoBehaviour
         }
 
         fact1.GetComponent<Button>().onClick.AddListener(fact1Click);
-        //image.GetComponent<Button>().onClick.AddListener(imageClick);
+        image.GetComponent<Button>().onClick.AddListener(imageClick);
         fact2.GetComponent<Button>().onClick.AddListener(fact2Click);
     }
 
@@ -27,11 +27,9 @@ public class HintsPanel : MonoBehaviour
     public void fact1Click()
     {
         //change this back once images are fixed
-        fact1.SetActive(false);
-        //image.SetActive(true);
+        fact1.SetActive(true);
         image.SetActive(false);
-        //fact2.SetActive(false);
-        fact2.SetActive(true);
+        fact2.SetActive(false);
     }
 
     public void imageClick()
