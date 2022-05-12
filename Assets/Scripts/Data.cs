@@ -9,15 +9,17 @@ public class Data : MonoBehaviour
     Dictionary<int, string> quizOption = new Dictionary<int, string>();
 
     static public int currentQuestion;
+    static public bool complete;
+    static public int currentMainQuestion = 0;
     static public int currentQuizQuestion = 0;
-    static public int amountOfQuestions = 1;
+    static public int amountOfQuestions;
 
     static public int levelPoints;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        complete = false;
        generateQuestion();
         //Game dictionary
        states.Add(1, "NEWYORK, STATE CAPITAL: ALBANY, SLOGAN: THE \"EMPIRE STATE\", STATE FLOWER: ROSE, RATIFIED: JUL 26 1788, Flags/NEWYORK");
@@ -108,12 +110,26 @@ public class Data : MonoBehaviour
     public void AssignPoints(int points)
     {
         levelPoints = points;
+
+        if(points == 100)
+        {
+            amountOfQuestions = 10;
+
+        }else if(points == 200)
+        {
+            amountOfQuestions = 25;
+
+        }else if(points == 300)
+        {
+            amountOfQuestions = 50;
+        }
     }
 
     public static void generateQuestion()
     {
         currentQuestion = Random.Range(1, 51);
-        if(currentQuizQuestion < 7)
+        currentMainQuestion += 1;
+        if (currentQuizQuestion < 7)
             currentQuizQuestion += 1;
     }
 }

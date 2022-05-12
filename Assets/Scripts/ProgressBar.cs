@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 public class ProgressBar : FillBar
 {
     // Event to invoke when progress bar fills up
@@ -32,7 +33,7 @@ public class ProgressBar : FillBar
         if (onProgressComplete == null)
             onProgressComplete = new UnityEvent();
         onProgressComplete.AddListener(OnProgressComplete);
-        maxScore = Data.levelPoints * 5;
+        maxScore = Data.levelPoints * Data.amountOfQuestions;
 
 
     }
@@ -50,5 +51,10 @@ public class ProgressBar : FillBar
     void OnProgressComplete()
     {
         Debug.Log("Progress Complete");
+        Data.complete = true;
+        int score = (int)Scoring.Instance.score;
+        PlayerData.Instance.SetScore(score);
+        Destroy(GameObject.Find("Question"));
+        SceneManager.LoadScene(7, LoadSceneMode.Single);
     }
 }

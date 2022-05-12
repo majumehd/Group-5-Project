@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneSwitcher : MonoBehaviour
 {
+    GameObject name;
     //Opens the scene of the main game
     public void playGame()
     {
+        name = GameObject.Find("Name");
+        PlayerData.Instance.SetName(name.GetComponent<Text>().text);
         SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 
@@ -26,6 +30,9 @@ public class SceneSwitcher : MonoBehaviour
     //Hosts the menu for the game
     public void playMenu()
     {
+        //Data.complete = true;
+        Destroy(GameObject.Find("GameObject"));
+        Destroy(GameObject.Find("Question"));
         SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 
@@ -51,4 +58,11 @@ public class SceneSwitcher : MonoBehaviour
     {
             SceneManager.LoadScene("settings");
     }
+
+    public void playHighScore()
+    {
+        SceneManager.LoadScene(7, LoadSceneMode.Single);
+    }
+
+
 }

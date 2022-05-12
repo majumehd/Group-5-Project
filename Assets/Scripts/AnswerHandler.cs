@@ -98,7 +98,8 @@ public class AnswerHandler : MonoBehaviour
 
         yield return new WaitForSeconds(0);
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
     }
 
     IEnumerator FadeIncorrect()

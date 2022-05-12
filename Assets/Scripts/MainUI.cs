@@ -51,6 +51,8 @@ public class MainUI : MonoBehaviour
 
     public void MainMenu()
     {
+        Destroy(GameObject.Find("GameObject"));
+        Destroy(GameObject.Find("Question"));
         SceneManager.LoadScene("Menu");
     }
 
