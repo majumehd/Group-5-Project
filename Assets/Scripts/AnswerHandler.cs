@@ -73,8 +73,7 @@ public class AnswerHandler : MonoBehaviour
 
         public void LetterClick(string letter)
     {
-        Text inputField = GameObject.FindGameObjectWithTag("input").GetComponent<Text>();
-        inputField.text = "A";
+        answerInput.text += letter;
 
         Debug.Log(letter);
     }
@@ -97,7 +96,7 @@ public class AnswerHandler : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

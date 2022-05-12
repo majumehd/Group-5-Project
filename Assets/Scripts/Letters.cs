@@ -10,6 +10,8 @@ public class Letters : MonoBehaviour
     public static bool next = false;
     public static string[] values;
 
+    GameObject trivia;
+
     Dictionary<int, string> data = null;
     
     // Start is called before the first frame update
@@ -17,6 +19,8 @@ public class Letters : MonoBehaviour
     {
         dataUpdate();
         triviaInitializer();
+        /*GameObject trivia = GameObject.Find("Trivia");
+        trivia.GetComponent<HintsPanel>().allOn();*/
     }
 
     // Update is called once per frame
@@ -71,6 +75,7 @@ public class Letters : MonoBehaviour
         string state = values[0];
         Debug.Log(state);
 
+       /* trivia.GetComponent<HintsPanel>().fact2Click();*/
         Text fact1 = GameObject.FindGameObjectWithTag("T_Fact1").GetComponent<Button>().GetComponentInChildren<Text>();
         Button image = GameObject.FindGameObjectWithTag("T_Image").GetComponent<Button>();
         Text fact2 = GameObject.FindGameObjectWithTag("T_Fact2").GetComponent<Button>().GetComponentInChildren<Text>();

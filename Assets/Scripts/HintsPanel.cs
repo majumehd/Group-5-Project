@@ -9,15 +9,13 @@ public class HintsPanel : MonoBehaviour
     public GameObject image;
     public GameObject fact2;
 
+
     void Start()
     {
-        if(fact1 == null || image == null || fact2 == null)
-        {
             fact1 = GameObject.FindGameObjectWithTag("T_Fact1");
             image = GameObject.FindGameObjectWithTag("T_Image");
             fact2 = GameObject.FindGameObjectWithTag("T_Fact2");
-        }
-
+       
         fact1.GetComponent<Button>().onClick.AddListener(fact1Click);
         image.GetComponent<Button>().onClick.AddListener(imageClick);
         fact2.GetComponent<Button>().onClick.AddListener(fact2Click);
@@ -27,8 +25,8 @@ public class HintsPanel : MonoBehaviour
     public void fact1Click()
     {
         //change this back once images are fixed
-        fact1.SetActive(true);
-        image.SetActive(false);
+        fact1.SetActive(false);
+        image.SetActive(true);
         fact2.SetActive(false);
     }
 
@@ -44,6 +42,13 @@ public class HintsPanel : MonoBehaviour
         fact1.SetActive(true);
         image.SetActive(false);
         fact2.SetActive(false);
+    }
+
+    public void allOn()
+    {
+        fact1.SetActive(true);
+        image.SetActive(true);
+        fact2.SetActive(true);
     }
 
 }
