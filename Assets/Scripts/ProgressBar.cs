@@ -44,7 +44,7 @@ public class ProgressBar : FillBar
         //Edit this value to change the scoring function in relation to the progress bar
         //Find the GameObject "Score", get the component "Scoring" (a script) from it, access the "score" value in it, then assign it to CurrentValue
 
-        CurrentValue = ((GameObject.Find("Question").GetComponent<Scoring>().score) / maxScore);
+        CurrentValue = (((GameObject.Find("Question").GetComponent<Scoring>().score)+(GameObject.Find("Question").GetComponent<Scoring>().fakeScore)) / maxScore);
         // CurrentValue += .005f;
     }
 

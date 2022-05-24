@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Scoring : MonoBehaviour
 {
     [SerializeField] public float score = 0;
+    [SerializeField] public float fakeScore = 0;
     //Change value of DEFAULT_POINTS by whatever we decide for in our scoring system per correct answer
     public float DEFAULT_POINTS;
     [SerializeField] Text scoreTxt;
@@ -46,6 +47,13 @@ public class Scoring : MonoBehaviour
         }
         if(!Data.complete)
           DisplayScore();
+
+        if (AnswerHandler.failed)
+        {
+            AnswerHandler.failed = false;
+            Scoring.Instance.FakePoints();
+           
+        }
     }
 
     //Function to add points to score by value in "points"
@@ -60,6 +68,12 @@ public class Scoring : MonoBehaviour
     {
         AddPoints(DEFAULT_POINTS);
     }
+
+    public void FakePoints()
+    {
+        fakeScore += DEFAULT_POINTS;
+    }
+
     public void DisplayScore()
     {
         scoreTxt = GameObject.FindGameObjectWithTag("score").GetComponent<Text>();

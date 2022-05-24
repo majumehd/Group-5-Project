@@ -6,23 +6,28 @@ using UnityEngine.SceneManagement;
 
 public class AnswerHandler : MonoBehaviour
 {
-    public GameObject heart1, heart2, heart3;
+    public GameObject heart1, heart2, heart3, firstLetter, lastLetter, hintBar, AnswerBar;
     public static int heart;
     Text inputField;
     public static string input;
     public static bool finish = false;
     public static bool win = false;
+    public static bool failed = false;
     public InputField answerInput;
     public Text correctTxt;
     public Text incorrectTxt;
     void Start()
     {
-       heart = 5;
+       heart = 3;
        heart1.gameObject.SetActive(true);
        heart2.gameObject.SetActive(true);
        heart1.gameObject.SetActive(true);
        heart1.gameObject.SetActive(true);
        heart1.gameObject.SetActive(true);
+       hintBar.gameObject.SetActive(false);
+       AnswerBar.gameObject.SetActive(false);
+       lastLetter.gameObject.SetActive(false);
+       firstLetter.gameObject.SetActive(false);
 
         if (inputField == null)
         inputField = GameObject.FindGameObjectWithTag("input").GetComponent<Text>();
@@ -32,8 +37,6 @@ public class AnswerHandler : MonoBehaviour
 
     void Update()
     {
-        if (heart > 3)
-            heart = 3;
         switch (heart)
         {
             case 2:
@@ -41,14 +44,17 @@ public class AnswerHandler : MonoBehaviour
                 heart1.gameObject.SetActive(true);
                 heart2.gameObject.SetActive(true);
                 heart3.gameObject.SetActive(false);
-                
+                hintBar.gameObject.SetActive(true);
+                firstLetter.gameObject.SetActive(true);
+                firstLetter.gameObject.GetComponentInChildren<Text>().text = Letters.values[0][0].ToString();
                 break;
             case 1:
                 
                 heart1.gameObject.SetActive(true);
                 heart2.gameObject.SetActive(false);
                 heart3.gameObject.SetActive(false);
-                
+                lastLetter.gameObject.SetActive(true);
+                lastLetter.gameObject.GetComponentInChildren<Text>().text = Letters.values[0][Letters.values[0].Length - 1].ToString();
                 break;
            
             case 0:
@@ -56,34 +62,30 @@ public class AnswerHandler : MonoBehaviour
                 heart1.gameObject.SetActive(false);
                 heart2.gameObject.SetActive(false);
                 heart3.gameObject.SetActive(false);
-                Data.generateQuestion();
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                hintBar.gameObject.SetActive(false);
+                AnswerBar.gameObject.SetActive(true);
+                AnswerBar.gameObject.GetComponentInChildren<Text>().text = Letters.values[0].ToString();
+                Invoke("DelayedAction", 1.5f);
                 break;
 
         }
-       /* if (finish && !win)
+ 
+
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            Debug.Log(input);
-            
-            if (answerInput.text.ToUpper() == Letters.values[0])
-            {
-                Debug.Log("CONGRATS");
-                win = true;
-                finish = false;
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
-            else
-            {
-            
-                finish = false;
-                answerInput.text = "";
-                incorrectTxt.StartCoroutine(FadeIncorrect());
-            }
-
-        }*/
-
+            OnClick();
+            Debug.Log("Return key was released");
+        }
         
 
+    }
+
+
+    void DelayedAction()
+    {
+        failed = true;
+        Data.generateQuestion();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void OnClick()
