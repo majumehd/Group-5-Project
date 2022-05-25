@@ -9,7 +9,7 @@ public class Settings : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        volumeSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1.0f);
+        volumeSlider.value = PlayerPrefs.GetFloat("MusicVolume", .3f);
     }
 
     // Update is called once per frame

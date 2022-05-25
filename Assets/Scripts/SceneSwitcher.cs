@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class SceneSwitcher : MonoBehaviour
 {
     GameObject name;
     //Opens the scene of the main game
+    private void Start()
+    {
+        AudioListener.volume = PlayerPrefs.GetFloat("MusicVolume", .3f);
+    }
     public void playGame()
     {
         name = GameObject.Find("Name");
